@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    background-image: url("images/monument-valley-g20ab015ac_640.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.Heading{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: bold;
+    color: gold;
+    font-size:40px;
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: bisque;
+    border: 5px solid #000;
+    flex: 0 1 15em;
+    max-width:calc(50% - 1em);
+}
+
+img {
+    display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+.button{
+    background-color:rgba(90, 82, 7, 0.274);
+    border-radius: 10PX;
+    font-size: 20px;
+    position: center;
+}
