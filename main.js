@@ -51,6 +51,15 @@ Wagon.prototype.shouldQuarantine = function(){
 Wagon.prototype.totalFood = function() {
 return this.passangers.reduce((acc, currentTraveler) => acc+currentTraveler.food, 0);
 }*/
+let startbutton = document.querySelector('#startButton')
+startbutton.innerText = "Start game"
+
+
+document.addEventListener("click", startGame)
+
+function startGame(){
+    startbutton.style.display = 'none';
+
 
 //creates the traveler:
 class Traveler{
@@ -132,4 +141,5 @@ class deluxeWagon extends Wagon{
         super(capacity)
         this.passangers = [];
     }
+}
 }

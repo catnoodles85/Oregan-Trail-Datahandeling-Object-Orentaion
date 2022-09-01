@@ -57,4 +57,34 @@ img {
     border-radius: 10PX;
     font-size: 20px;
     position: center;
+    cursor: pointer;
+    
+}
+
+#startButton{
+    background-color:rgba(100, 91, 9, 0.925);
+    border-radius: 10PX;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+    margin: 50px;
+    position: center;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 50px;
+    color: gold;
+} 
+
+.cardMessage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-flow: wrap;
+
+    justify-content: center;
+    background-color: bisque;
+    border: 3px solid #000;
+    flex: 0 1 15em;
+    max-width:calc(50% - 1em);
 }
