@@ -54,12 +54,21 @@ return this.passangers.reduce((acc, currentTraveler) => acc+currentTraveler.food
 let startbutton = document.querySelector('#startButton')
 startbutton.innerText = "Start game"
 
+const parentDOM = document.querySelector('#centered');
+const cards = parentDOM.getElementsByClassName('cards');
+
+
+
+
+console.log(cards)
+
+
 
 document.addEventListener("click", startGame)
 
 function startGame(){
     startbutton.style.display = 'none';
-
+}
 
 //creates the traveler:
 class Traveler{
@@ -141,5 +150,4 @@ class deluxeWagon extends Wagon{
         super(capacity)
         this.passangers = [];
     }
-}
 }
