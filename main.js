@@ -52,7 +52,7 @@ Wagon.prototype.totalFood = function() {
 return this.passangers.reduce((acc, currentTraveler) => acc+currentTraveler.food, 0);
 }*/
 let startbutton = document.querySelector('#startButton')
-startbutton.innerText = "Start game"
+startbutton.innerText = "Start Game"
 
 
 document.addEventListener("click", startGame)
