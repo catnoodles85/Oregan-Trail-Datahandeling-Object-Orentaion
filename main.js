@@ -53,6 +53,7 @@ return this.passangers.reduce((acc, currentTraveler) => acc+currentTraveler.food
 }*/
 let startbutton = document.querySelector('#startButton')
 startbutton.innerText = "Start Game"
+<<<<<<< HEAD
 
 const parentDOM = document.querySelector('#centered');
 const cards = parentDOM.getElementsByClassName('cards');
@@ -62,6 +63,8 @@ const cards = parentDOM.getElementsByClassName('cards');
 
 console.log(cards)
 
+=======
+>>>>>>> 469782121b5147f3f3d81de57e79a6c1e5ff940d
 
 
 document.addEventListener("click", startGame)
