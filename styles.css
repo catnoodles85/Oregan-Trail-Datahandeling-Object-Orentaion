@@ -39,11 +39,17 @@ p{
     font-size: 18px;
 }
 
+
+
 .cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
 }
+
+/*
+ids/ wagonCard deluxCard hunterCard DoctorCard
+*/
 
 .card {
     background-color: bisque;
@@ -53,6 +59,10 @@ p{
     max-width:300px;
     margin: 10px 5px;
 }
+
+/*
+wagonCard deluxCard hunterCard DoctorCard
+*/
 
 .card > p {
     margin: 10px 0;
@@ -96,7 +106,8 @@ img {
 } 
 
 
-.cardMessage {
+#cardMessage {
+    font-family: 'Playfair Display', serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

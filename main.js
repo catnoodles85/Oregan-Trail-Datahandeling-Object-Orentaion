@@ -10,56 +10,32 @@
 // Wagon creates a Wagon
 
 
-/*
-function Traveler(name) {
-    this.name = name;
-    this.food = 1;
-    this.isHealthy = true;
-}
-Traveler.prototype.hunt = function(){
-    return (this.food += 2);
-    
-}
-Traveler.prototype.eat = function(){
-    if(this.food < 1){
-        this.isHealthy = false;
-    }else{
-        this.food -= 1;
-    }
-}
-function Wagon(capacity) {
-     this.capacity = capacity;
-     this.passangers = [];
-}
-Wagon.prototype.getAvailableSeatCount = function(){
-    // reporting function. 
-    return this.capacity - this.passangers.length;
-}
-Wagon.prototype.join = function (traveler){
-    if(this.passangers.length < this.capacity){
-        this.passangers.push(traveler);
-    }else{
-        console.log(`unfortunalty, ${traveler.name}, this wagons full partner!`);
-    }
-}
-//! represents false
-Wagon.prototype.shouldQuarantine = function(){
-  return this.passangers.some((passanger) => !passanger.isHealthy);
-}
 
-// acc = bucket currentTravler = 
-Wagon.prototype.totalFood = function() {
-return this.passangers.reduce((acc, currentTraveler) => acc+currentTraveler.food, 0);
-}*/
-let startbutton = document.querySelector('#startButton')
+var startbutton = document.querySelector('#startButton')
 startbutton.innerText = "Start Game"
+
+let messageBox = document.getElementById('cardMessage').style.visibility = 'hidden';
+messageBox.innerText = "Game Progression Box"
+document.getElementsByClassName('cards')[0].style.visibility = 'hidden';
+
+let player = "Dude"
 
 
 document.addEventListener("click", startGame)
 
 function startGame(){
-    startbutton.style.display = 'none';
+    startbutton.style.visibility = 'hidden';
+    let cards = document.getElementsByClassName('cards')
+    let messageBox = document.getElementById('cardMessage')
+  if (cards[0].style.visibility === "hidden" && messageBox.style.visibility === "hidden") {
+   cards[0].style.visibility = "visible";
+   messageBox.innerText = `Welcome to the game ${player}. Choose your wagon partner!`;
+   messageBox.style.visibility = "visible";
+  } else {
+    cards[0].style.visibility = "hidden";
+  }
 }
+
 
 //creates the traveler:
 class Traveler{
@@ -89,10 +65,14 @@ class Doctor extends Traveler{
         super(name);// default info from the traveler constructor and creates a new traveler. adds special abillities
         this.food = 2;
     }
-    complain(){
-        let results = document.getElementById("response")
-            results.innerHTML = `unfortunalty, ${traveler.name}, this wagons full partner!`
-        console.log("you are sick! take your meds")
+    complain(traveler){
+        if(this.food < 2){
+            let messageBox = document.getElementById('cardMessage')
+            messageBox.innerText = `${traveler.name} you are sick! take your meds`
+            console.log(messageBox)
+        }else{
+            this.food = 1;
+        }
     }
     eat(){
         if(this.food < 2){
@@ -103,6 +83,8 @@ class Doctor extends Traveler{
     }
 
 }
+
+
 
 //creates wagons:
 class Wagon{
@@ -118,9 +100,9 @@ join(traveler){
        if(this.passangers.length < this.capacity){
            this.passangers.push(traveler);
        }else{
-            let results = document.getElementById("response")
-            results.innerHTML = `unfortunalty, ${traveler.name}, this wagons full partner!`
-            console.log(`unfortunalty, ${traveler.name}, this wagons full partner!`);
+            let messageBox = document.getElementById('cardMessage')
+            messageBox.innerText = `unfortunalty, ${traveler.name}, this wagons full partner!`;
+            console.log(messageBox);
        }
    }
    //! represents false
