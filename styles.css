@@ -115,8 +115,9 @@ img {
     justify-content: center;
     background-color: bisque;
     border: 3px solid #000;
+    border-radius: 8px;
     flex: 0 1 15em;
     margin: 20px auto;
-    max-width: 85%;
+    max-width: 95%;
     padding: 10px;
 }
